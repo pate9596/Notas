@@ -1,0 +1,36 @@
+﻿@page
+@using GestionNotas.Models 
+@using MongoDB.Bson.Serialization.Serializers;
+
+
+@model IndexModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Notas";
+}
+
+<h1>Gestor de Notas</h1>
+
+<form method="post" class="form-nota">
+    <input type="text" name="Titulo" placeholder="Título" required />
+    <textarea name="Contenido" placeholder="Escribe tu nota aquí..." required></textarea>
+    <button type="submit">Guardar Nota</button>
+</form>
+
+<div class="notas-containe">
+    @if (Model.Notas != null && Model.Notas.Any())
+    {
+        foreach (var nota in Model.Notas)
+        { 
+            <div class="nota">
+                <h2>@nota.Titulo</h2>
+                <p>@nota.Contenido</p>
+            </div>
+        }
+    }   
+    else
+    { 
+        <p class="sin-notas">No hay notas guardadas</p>
+    }
+
+</div>
