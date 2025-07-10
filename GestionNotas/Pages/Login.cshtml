@@ -10,36 +10,53 @@
 }
 
 <section class="section">
-    <div class="container">
-        <h1 class="title">Iniciar sesión</h1>
-
-        <form method="post">
-            <div class="field">
-                <label class="label">Correo electrónico</label>
-                <div class="control">
-                    <input class="input" type="email" name="Email" required asp-for="Email" />
-                </div>
-            </div>
-
-            <div class="field">
-                <label class="label">Contraseña</label>
-                <div class="control">
-                    <input class="input" type="password" name="Password" required asp-for="Password" />
-                </div>
-            </div>
-
-            @if (!ViewData.ModelState.IsValid)
-            {
-                <p class="has-text-danger">Correo o contraseña inválidos</p>
-            }
-
-            <div class="field mt-4">
-                <div class="control">
-                    <button class="button is-primary" type="submit">Iniciar sesión</button>
-                </div>
-            </div>
-
-            <p class="mt-3">¿No tienes cuenta? <a href="/Register">Regístrate aquí</a></p>
-        </form>
+    <form autocomplete='off' class='form'>
+  <div class='control'>
+    <h1 style="margin: auto;">Iniciar sesión</h1>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='Email' placeholder='Correo Electronico' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
     </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='password' placeholder='Password' type='password'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <button class='btn block-cube block-cube-hover' type='button'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='text'>
+      Crear Cuenta
+    </div>
+  </button>
+    <div class='control'>
+        <p class='text'>
+        ¿No tienes cuenta? <a href="/Register">Regístrate aquí</a>
+        </p>
+  </div>
+</form>
+
 </section>
