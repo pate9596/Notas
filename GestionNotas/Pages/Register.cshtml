@@ -1,10 +1,62 @@
 @page
 @using GestionNotas.Models 
 @using MongoDB.Bson.Serialization.Serializers;
+@using GestionNotas.Pages; // Add this if RegisterModel is in this namespace
 
-
-@model IndexModel
+@model RegisterModel
 @{
     Layout = "~/Pages/Shared/_Cuenta.cshtml";
     ViewData["Title"] = "Notas";
 }
+
+<section class="section">
+    <form autocomplete='off' class='form'>
+  <div class='control'>
+    <h1>
+      Crear Cuenta
+    </h1>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='username' placeholder='Username' type='text'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <div class='control block-cube block-input'>
+    <input name='password' placeholder='Password' type='password'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+  </div>
+  <button class='btn block-cube block-cube-hover' type='button'>
+    <div class='bg-top'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg-right'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='bg'>
+      <div class='bg-inner'></div>
+    </div>
+    <div class='text'>
+      Crear Cuenta
+    </div>
+    <p class="mt-3">¿No tienes cuenta? <a href="/Register">Regístrate aquí</a></p>
+  </button>
+  </div>
+</form>
+
+</section>
+

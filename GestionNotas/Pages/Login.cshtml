@@ -1,0 +1,45 @@
+@page
+@using GestionNotas.Models 
+@using MongoDB.Bson.Serialization.Serializers;
+
+
+@model LoginModel
+@{
+    Layout = "~/Pages/Shared/_Cuenta.cshtml";
+    ViewData["Title"] = "Notas";
+}
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Iniciar sesión</h1>
+
+        <form method="post">
+            <div class="field">
+                <label class="label">Correo electrónico</label>
+                <div class="control">
+                    <input class="input" type="email" name="Email" required asp-for="Email" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Contraseña</label>
+                <div class="control">
+                    <input class="input" type="password" name="Password" required asp-for="Password" />
+                </div>
+            </div>
+
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <p class="has-text-danger">Correo o contraseña inválidos</p>
+            }
+
+            <div class="field mt-4">
+                <div class="control">
+                    <button class="button is-primary" type="submit">Iniciar sesión</button>
+                </div>
+            </div>
+
+            <p class="mt-3">¿No tienes cuenta? <a href="/Register">Regístrate aquí</a></p>
+        </form>
+    </div>
+</section>

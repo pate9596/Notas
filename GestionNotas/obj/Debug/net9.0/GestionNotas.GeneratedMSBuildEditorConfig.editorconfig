@@ -28,16 +28,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Paginas/Notas/GestionNotas/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Paginas/Notas/GestionNotas/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Paginas/Notas/GestionNotas/Pages/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Paginas/Notas/GestionNotas/Pages/Shared/_Cuenta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9DdWVudGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Paginas/Notas/GestionNotas/Pages/Shared/_ValidationScriptsPartial.cshtml]
@@ -51,6 +51,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Paginas/Notas/GestionNotas/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Paginas/Notas/GestionNotas/Pages/Shared/_Cuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9DdWVudGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-es8859q2gw
 
 [C:/Paginas/Notas/GestionNotas/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
