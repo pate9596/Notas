@@ -1,0 +1,10 @@
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.csproj.AssemblyReference.cache
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.AssemblyInfoInputs.cache
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.AssemblyInfo.cs
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.csproj.CoreCompileInputs.cache
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.MvcApplicationPartsAssemblyInfo.cache
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.RazorAssemblyInfo.cache
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.RazorAssemblyInfo.cs
+C:\Paginas\Notas\GestionNotas\obj\Debug\net8.0\GestionNotas.sourcelink.json

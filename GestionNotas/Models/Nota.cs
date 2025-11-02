@@ -7,12 +7,19 @@ namespace GestionNotas.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public required string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         [BsonElement("titulo")]
-        public required string Titulo { get; set; }
+        public string Titulo { get; set; } = string.Empty;
 
         [BsonElement("contenido")]
-        public required string Contenido { get; set; }
+        public string Contenido { get; set; } = string.Empty;
+
+        [BsonElement("fechaCreacion")]
+        public DateTime FechaCreacion { get; set; }
+
+        [BsonElement("usuarioId")]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string UsuarioId { get; set; } = string.Empty;
     }
 }

@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #dadada;
+  background-color: #dfdfdf;
   color: #000000;
   font-family: monospace, serif;
   letter-spacing: 0.05em;
@@ -16,9 +16,13 @@ h1 {
 }
 
 .form {
+  text-align: center;
   width: 300px;
   padding: 64px 15px 24px;
   margin: 0 auto;
+  background-color: rgb(145, 177, 145);
+  border-radius: 2rem ;
+  margin-top: 4rem;
 }
 .form .control {
   margin: 0 0 24px;
@@ -28,7 +32,8 @@ h1 {
   padding: 14px 16px;
   border: 0;
   background: transparent;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
   font-family: monospace, serif;
   letter-spacing: 0.05em;
   font-size: 16px;
@@ -49,6 +54,7 @@ h1 {
   font-weight: bold;
   font-family: monospace;
   font-size: 16px;
+  background-color: #41875bb0;
 }
 
 .block-cube {
@@ -109,6 +115,7 @@ h1 {
 .block-cube.block-input input {
   position: relative;
   z-index: 2;
+  background-color: white;
 }
 .block-cube.block-input input:focus ~ .bg-right .bg-inner, .block-cube.block-input input:focus ~ .bg-top .bg-inner, .block-cube.block-input input:focus ~ .bg-inner .bg-inner {
   top: 100%;

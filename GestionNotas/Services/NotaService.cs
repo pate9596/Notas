@@ -1,6 +1,5 @@
 using MongoDB.Driver;
 using GestionNotas.Models;
-using Microsoft.Extensions.Configuration;
 
 namespace GestionNotas.Services
 {
@@ -8,19 +7,29 @@ namespace GestionNotas.Services
     {
         private readonly IMongoCollection<Nota> _notas;
 
-        public NotaService(IConfiguration config)
+        public NotaService(IMongoClient client)
         {
-            var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("gestionnotas");
             _notas = database.GetCollection<Nota>("notas");
         }
 
-        public List<Nota> Get()
+        public async Task CrearNotaAsync(Nota nota)
         {
-            var lista = _notas.Find(n => true).ToList();
-            Console.WriteLine($"Notas encontradas: {lista.Count}");
-            return lista;
+            nota.FechaCreacion = DateTime.UtcNow;
+            await _notas.InsertOneAsync(nota);
         }
 
+        public async Task<List<Nota>> ObtenerNotasPorUsuarioAsync(string usuarioId)
+        {
+            var filter = Builders<Nota>.Filter.Eq(n => n.UsuarioId, usuarioId);
+            return await _notas.Find(filter)
+                               .SortByDescending(n => n.FechaCreacion)
+                               .ToListAsync();
+        }
+
+        public async Task EliminarNotaAsync(string id)
+        {
+            await _notas.DeleteOneAsync(n => n.Id == id);
+        }
     }
 }

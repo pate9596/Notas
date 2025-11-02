@@ -6,20 +6,34 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//  Cadena de conexión 
-var mongoConnection = "mongodb://localhost:27017";
-
-// Add services to the container.
-builder.Services.AddSingleton<IMongoClient>(s =>
+// ✅ Habilitar CORS para el frontend
+builder.Services.AddCors(options =>
 {
-    return new MongoClient(mongoConnection);
+    options.AddPolicy("AllowReactApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
 });
+
+
+
+// 🔹 Conexión MongoDB
+var mongoConnection = "mongodb://localhost:27017";
+builder.Services.AddSingleton<IMongoClient>(s => new MongoClient(mongoConnection));
+
+// 🔹 Servicios
 builder.Services.AddSingleton<NotaService>();
+builder.Services.AddSingleton<UsuarioService>();
 builder.Services.AddRazorPages();
+builder.Services.AddSession();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddControllers(); // ✅ habilita controladores
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
@@ -28,9 +42,14 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseAuthorization();
 
+// ✅ Activar CORS
+app.UseCors("AllowReactApp");
+app.MapControllers();
+
+
+app.UseAuthorization();
 app.MapStaticAssets();
 app.MapRazorPages().WithStaticAssets();
-
+app.UseSession();
 app.Run();
